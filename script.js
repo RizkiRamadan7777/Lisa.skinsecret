@@ -79,9 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.className = "card";
       card.innerHTML = `
-        <img src="${p.image}" alt="${p.title}">
+        <div class="card-image">
+          <img src="${p.image}" alt="${p.title}">
+          <span class="card-number">${index + 1}</span>
+        </div>
         <div class="card-content">
-          <span class="card-number">${index + 1}.</span>
           <h3 class="card-title">${p.title}</h3>
           <a href="${p.url}" target="_blank" class="card-button">Beli di Shopee</a>
         </div>
