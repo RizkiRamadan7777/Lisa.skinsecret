@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lisa Skin Secret</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="hero">
+        <h1>Lisa Skin Secret</h1>
+        <p>Temukan produk terbaik untuk perawatan kecantikanmu</p>
+      </div>
+      <div class="controls">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Cari produk...">
+          <span class="search-icon">🔍</span>
+        </div>
+        <select id="categoryFilter">
+          <option value="all">Semua Kategori</option>
+          <option value="Makeup">Makeup</option>
+          <option value="Skincare">Skincare</option>
+          <option value="Rambut">Rambut</option>
+          <option value="Kulit">Kulit</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div id="productGrid" class="grid"></div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Lisa Skin Secret</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
