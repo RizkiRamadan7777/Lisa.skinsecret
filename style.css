@@ -100,17 +100,48 @@ main { flex: 1; padding: 1rem; }
   background: #e66777;
 }
 
+/* SOCIAL ICONS */
+.social-icons {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+  color: #333;
+  transition: color 0.2s;
+}
+.social-icons a:hover {
+  color: #ff9a9e;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 1rem;
   background: #f1f1f1;
+}
+footer p {
+  padding: 0.5rem 0;
   font-size: 0.9rem;
 }
 
-/* RESPONSIVE: 2 KOLONG DI HP */
+/* RESPONSIVE: 2 KOLONG DI HP + adjust search width */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .controls-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .controls-card input {
+    flex: 3;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+  .controls-card select {
+    flex: 1;
+    font-size: 0.85rem;
+    padding: 0.5rem;
   }
 }
