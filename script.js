@@ -3,7 +3,7 @@ const products = [
     id: 1,
     title: "Lisa Skin Secret - Serum Vitamin C",
     price: "Rp 150.000",
-    image: "https://via.placeholder.com/300x300?text=Serum+Vitamin+C",
+    image: "https://imgur.com/YKPJHbG",
     category: "Skincare",
     url: "https://shopee.co.id/affiliate-link-serum-vitc"
   },
@@ -11,7 +11,7 @@ const products = [
     id: 2,
     title: "Lisa Skin Secret - Masker Lumpur",
     price: "Rp 75.000",
-    image: "https://via.placeholder.com/300x300?text=Masker+Lumpur",
+    image: "https://imgur.com/n8MVi0O",
     category: "Skincare",
     url: "https://shopee.co.id/affiliate-link-masker-lumpur"
   },
@@ -19,7 +19,7 @@ const products = [
     id: 3,
     title: "Lisa Skin Secret - Lipstik Matte",
     price: "Rp 120.000",
-    image: "https://via.placeholder.com/300x300?text=Lipstik+Matte",
+    image: "https://imgur.com/jI9NpYP",
     category: "Makeup",
     url: "https://shopee.co.id/affiliate-link-lipstik-matte"
   },
