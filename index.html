@@ -4,24 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lisa Skin Secret Affiliate</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Lisa Skin Secret</h1>
-    <div class="controls">
-      <input type="text" id="searchInput" placeholder="Cari produk..." />
-      <select id="categoryFilter">
-        <option value="all">Semua Kategori</option>
-      </select>
+    <div class="hero">
+      <h1>Lisa Skin Secret</h1>
+      <p class="subtitle">Temukan Produk Kecantikan Terbaikmu</p>
+      <div class="controls-card">
+        <input type="text" id="searchInput" placeholder="Cari produk..." />
+        <select id="categoryFilter"></select>
+      </div>
     </div>
   </header>
+
   <main>
     <div id="productGrid" class="grid"></div>
   </main>
+
   <footer>
     <p>&copy; 2025 Lisa Skin Secret</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
