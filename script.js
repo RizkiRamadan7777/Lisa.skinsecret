@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("productGrid");
   const searchInput = document.getElementById("searchInput");
   const categoryFilter = document.getElementById("categoryFilter");
-  const header = document.getElementById("header");
 
   // populate categories
   const categories = ["all", ...new Set(products.map(p => p.category))];
@@ -46,13 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("input", renderItems);
   categoryFilter.addEventListener("change", renderItems);
   renderItems();
-
-  // shrink header on scroll
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 150) {
-      header.classList.add("shrink");
-    } else {
-      header.classList.remove("shrink");
-    }
-  });
 });
