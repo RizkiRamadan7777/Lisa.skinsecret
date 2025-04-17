@@ -4,21 +4,15 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #fafafa;
   color: #333;
-  display: flex;
-  flex-direction: column;
+  display: flex; flex-direction: column;
   min-height: 100vh;
 }
 
-/* HEADER */
+/* HEADER HERO */
 header {
   background: linear-gradient(135deg, #ff9a9e 0%, #ffc3a0 100%);
   color: #fff;
   text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s;
 }
 .hero {
   padding: 1.5rem 1rem 0.5rem;
@@ -47,13 +41,16 @@ header {
   color: #2c3e50;
 }
 
-/* SEARCH + FILTER CARD */
+/* CONTROLS STICKY */
 .controls-card {
+  position: sticky;
+  top: 0;
+  z-index: 200;
   display: flex;
   justify-content: center;
   background: #fff;
   padding: 0.5rem;
-  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .controls-card input,
 .controls-card select {
@@ -71,24 +68,6 @@ header {
   border-radius: 4px;
 }
 
-/* SHRINK EFFECT */
-header.shrink .hero,
-header.shrink .header-social,
-header.shrink select {
-  display: none;
-}
-header.shrink {
-  background: #fff;
-  color: #333;
-}
-header.shrink .controls-card {
-  border-radius: 0;
-  background: #fff;
-}
-header.shrink input {
-  width: 90%;
-}
-
 /* MAIN GRID */
 main { flex: 1; padding: 1rem; }
 .grid {
@@ -104,8 +83,7 @@ main { flex: 1; padding: 1rem; }
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
+  display: flex; flex-direction: column;
 }
 .card-number {
   position: absolute;
@@ -114,23 +92,17 @@ main { flex: 1; padding: 1rem; }
   color: #fff;
   width: 24px; height: 24px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 600;
 }
 .card img {
-  width: 100%;
-  height: 150px;
+  width: 100%; height: 150px;
   object-fit: cover;
 }
 .card-content {
   padding: 0.75rem;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex; flex-direction: column; justify-content: space-between;
 }
 .card-title {
   font-size: 0.95rem;
@@ -164,15 +136,8 @@ footer p {
 
 /* RESPONSIVE: 2 COLUMN ON MOBILE */
 @media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .controls-card input {
-    font-size: 0.85rem;
-    padding: 0.5rem;
-  }
-  .controls-card select {
-    font-size: 0.85rem;
-    padding: 0.5rem;
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .controls-card input, .controls-card select {
+    font-size: 0.85rem; padding: 0.5rem;
   }
 }
