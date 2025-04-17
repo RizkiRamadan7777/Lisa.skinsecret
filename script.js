@@ -4,17 +4,17 @@ const products = [
   { id: 3, title: "Lisa Skin Secret - Lipstik Matte",      image: "https://via.placeholder.com/300?text=Lipstik", category: "Makeup",   url: "https://shopee.co.id/affiliate-link-lipstik" },
   { id: 4, title: "Lisa Skin Secret - Hair Serum",         image: "https://via.placeholder.com/300?text=Hair+Serum", category: "Rambut", url: "https://shopee.co.id/affiliate-link-hair-serum" },
   { id: 5, title: "Lisa Skin Secret - Body Lotion",        image: "https://via.placeholder.com/300?text=Body+Lotion", category: "Kulit", url: "https://shopee.co.id/affiliate-link-lotion" },
-  // Tambah produk di sini...
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("productGrid");
   const searchInput = document.getElementById("searchInput");
   const categoryFilter = document.getElementById("categoryFilter");
+  const header = document.getElementById("header");
 
-  // generate kategori sekali
-  const cats = ["all", ...new Set(products.map(p => p.category))];
-  cats.forEach(cat => {
+  // populate categories
+  const categories = ["all", ...new Set(products.map(p => p.category))];
+  categories.forEach(cat => {
     const opt = document.createElement("option");
     opt.value = cat;
     opt.textContent = cat === "all" ? "Semua Kategori" : cat;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.innerHTML = "";
 
     products
-      .filter((p) => (selCat === "all" || p.category === selCat) && p.title.toLowerCase().includes(term))
+      .filter(p => (selCat === "all" || p.category === selCat) && p.title.toLowerCase().includes(term))
       .forEach((p, idx) => {
         const card = document.createElement("div");
         card.className = "card";
@@ -46,4 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("input", renderItems);
   categoryFilter.addEventListener("change", renderItems);
   renderItems();
+
+  // shrink header on scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 150) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
 });
