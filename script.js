@@ -1,5 +1,5 @@
 const products = [
-  { id: 1, title: "Lisa Skin Secret - Serum Vitamin C", image: "https://imgur.com/jI9NpYP.png", category: "Skincare", url: "https://shopee.co.id/affiliate-link-serum-c" },
+  { id: 1, title: "Lisa Skin Secret - Serum Vitamin C", image: "https://i.imgur.com/jI9NpYP.png", category: "Skincare", url: "https://shopee.co.id/affiliate-link-serum-c" },
   { id: 2, title: "Lisa Skin Secret - Masker Wajah",       image: "https://via.placeholder.com/300?text=Masker", category: "Skincare", url: "https://shopee.co.id/affiliate-link-masker" },
   { id: 3, title: "Lisa Skin Secret - Lipstik Matte",      image: "https://via.placeholder.com/300?text=Lipstik", category: "Makeup",   url: "https://shopee.co.id/affiliate-link-lipstik" },
   { id: 4, title: "Lisa Skin Secret - Hair Serum",         image: "https://via.placeholder.com/300?text=Hair+Serum", category: "Rambut", url: "https://shopee.co.id/affiliate-link-hair-serum" },
