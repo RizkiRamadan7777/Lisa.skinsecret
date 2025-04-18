@@ -17,13 +17,11 @@ header {
   padding-bottom: 0.5rem;
 }
 .hero {
-  padding: 1.5rem 1rem 0.5rem;
+  padding: 1.5rem 1rem 0;
 }
 .hero h1 { font-size: 2rem; font-weight: 600; }
 .hero .subtitle { font-size: 1rem; margin-top: 0.25rem; opacity: 0.9; }
-.header-social {
-  padding: 0.5rem 0;
-}
+.header-social { padding: 0.5rem 0; }
 .header-social a { margin: 0 0.5rem; font-size: 1.25rem; color: #fff; transition: color 0.2s; }
 .header-social a:hover { color: #2c3e50; }
 
@@ -68,7 +66,7 @@ main { flex: 1; padding: 1rem; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 .card-number {
@@ -98,16 +96,30 @@ main { flex: 1; padding: 1rem; }
   flex: 1;
   text-decoration: none;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  transition: background 0.2s;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s, transform 0.2s;
 }
-.card-button-shopee { background: #ff9a9e; color: #fff; }
-.card-button-shopee:hover { background: #e66777; }
-.card-button-tiktok { background: #69C9D0; color: #000; }
-.card-button-tiktok:hover { background: #1cbaba; }
+.card-button:hover {
+  transform: scale(1.05);
+}
+.card-button-shopee {
+  background: #ff6b81;
+  color: #fff;
+}
+.card-button-shopee:hover {
+  background: #ff4757;
+}
+.card-button-tiktok {
+  background: #69C9D0;
+  color: #000;
+}
+.card-button-tiktok:hover {
+  background: #1abc9c;
+}
 
 /* FOOTER */
 footer { text-align: center; background: #f1f1f1; }
@@ -116,5 +128,6 @@ footer p { padding: 0.75rem 0; font-size: 0.9rem; }
 /* RESPONSIVE: 2 COLUMN ON MOBILE */
 @media (max-width: 600px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
-  .controls-card input, .controls-card select { font-size: 0.85rem; padding: 0.5rem; }
+  .controls-card input,
+  .controls-card select { font-size: 0.85rem; padding: 0.5rem; }
 }
