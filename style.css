@@ -2,7 +2,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: 'Poppins', sans-serif;
-  background: #fafafa;
+  background: #fff;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -11,19 +11,38 @@ body {
 
 /* HEADER HERO */
 header {
-  background: linear-gradient(135deg, #ff9a9e 0%, #ffc3a0 100%);
-  color: #fff;
+  background: #f7f1ff;
   text-align: center;
   padding-bottom: 0.5rem;
 }
 .hero {
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   padding: 1.5rem 1rem 0;
 }
-.hero h1 { font-size: 2rem; font-weight: 600; }
-.hero .subtitle { font-size: 1rem; margin-top: 0.25rem; opacity: 0.9; }
-.header-social { padding: 0.5rem 0; }
-.header-social a { margin: 0 0.5rem; font-size: 1.25rem; color: #fff; transition: color 0.2s; }
-.header-social a:hover { color: #2c3e50; }
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.hero .subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+.header-social {
+  padding: 0.75rem 0;
+  background: #fff;
+}
+.header-social a {
+  margin: 0 0.75rem;
+  font-size: 1.4rem;
+  color: #6c5ce7;
+  transition: color 0.2s;
+}
+.header-social a:hover {
+  color: #341f97;
+}
 
 /* CONTROLS STICKY */
 .controls-card {
@@ -38,13 +57,19 @@ header {
 }
 .controls-card input,
 .controls-card select {
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
   margin: 0 0.25rem;
 }
-.controls-card input { flex: 1; border-radius: 4px; }
-.controls-card select { background: #f1f1f1; border-radius: 4px; }
+.controls-card input {
+  flex: 1;
+  border-radius: 4px;
+}
+.controls-card select {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
 
 /* MAIN GRID */
 main { flex: 1; padding: 1rem; }
@@ -66,28 +91,34 @@ main { flex: 1; padding: 1rem; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 .card-number {
   position: absolute;
   top: 8px; left: 8px;
-  background: #ff9a9e;
+  background: #6c5ce7;
   color: #fff;
-  width: 24px; height: 24px;
+  width: 26px; height: 26px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.8rem; font-weight: 600;
+  font-size: 0.85rem; font-weight: 600;
 }
-.card img { width: 100%; height: 150px; object-fit: cover; }
+.card img {
+  width: 100%; height: 150px;
+  object-fit: cover;
+}
 .card-content {
   padding: 0.75rem;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex; flex-direction: column; justify-content: space-between;
 }
-.card-title { font-size: 0.95rem; color: #2c3e50; margin-bottom: 0.75rem; }
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 0.75rem;
+}
 .card-buttons {
   display: flex;
   gap: 0.5rem;
@@ -96,38 +127,53 @@ main { flex: 1; padding: 1rem; }
   flex: 1;
   text-decoration: none;
   text-align: center;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-  transition: background 0.2s, transform 0.2s;
-}
-.card-button:hover {
-  transform: scale(1.05);
+  transition: background 0.2s;
 }
 .card-button-shopee {
-  background: #ff6b81;
+  background: #d63031;
   color: #fff;
 }
 .card-button-shopee:hover {
-  background: #ff4757;
+  background: #b71c1c;
 }
 .card-button-tiktok {
-  background: #69C9D0;
-  color: #000;
+  background: #010101;
+  color: #fff;
 }
 .card-button-tiktok:hover {
-  background: #1abc9c;
+  background: #333333;
 }
 
 /* FOOTER */
-footer { text-align: center; background: #f1f1f1; }
-footer p { padding: 0.75rem 0; font-size: 0.9rem; }
+footer {
+  text-align: center;
+  background: #6c5ce7;
+}
+footer p {
+  padding: 1rem 0;
+  color: #fff;
+  font-weight: 600;
+}
+footer .site-name {
+  font-weight: 800;
+}
 
-/* RESPONSIVE: 2 COLUMN ON MOBILE */
+/* RESPONSIVE: 2 COLUMN ON MOBILE + smaller buttons */
 @media (max-width: 600px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .controls-card input,
-  .controls-card select { font-size: 0.85rem; padding: 0.5rem; }
+  .controls-card select {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+  .card-button {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
 }
