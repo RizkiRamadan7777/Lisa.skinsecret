@@ -3,7 +3,7 @@ const products = [
   { id: 2, title: "Lisa Skin Secret - Masker Wajah",       image: "https://via.placeholder.com/300?text=Masker", category: "Skincare", shopeeUrl: "https://shopee.co.id/affiliate-link-masker", tiktokUrl: "https://tiktok.com/@yourpage/video/456" },
   { id: 3, title: "Lisa Skin Secret - Lipstik Matte",      image: "https://via.placeholder.com/300?text=Lipstik", category: "Makeup",   shopeeUrl: "https://shopee.co.id/affiliate-link-lipstik", tiktokUrl: "https://tiktok.com/@yourpage/video/789" },
   { id: 4, title: "Lisa Skin Secret - Hair Serum",         image: "https://via.placeholder.com/300?text=Hair+Serum", category: "Rambut", shopeeUrl: "https://shopee.co.id/affiliate-link-hair-serum", tiktokUrl: "https://tiktok.com/@yourpage/video/101" },
-  { id: 5, title: "Lisa Skin Secret - Body Lotion",        image: "https://i.imgur.com/jI9NpYP.png", category: "Kulit", shopeeUrl: "https://shopee.co.id/affiliate-link-lotion", tiktokUrl: "https://tiktok.com/@yourpage/video/102" },
+  { id: 5, title: "Lisa Skin Secret - Body Lotion",        image: "https://via.placeholder.com/300?text=Body+Lotion", category: "Kulit", shopeeUrl: "https://shopee.co.id/affiliate-link-lotion", tiktokUrl: "https://tiktok.com/@yourpage/video/102" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
